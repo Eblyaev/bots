@@ -45,7 +45,7 @@ void loop(){
           digitalWrite(DIR_2, HIGH); // set direction
           analogWrite(SPEED_2, 255); // set speed
           
-          delay(1000);
+          delay(900);
 
           digitalWrite(DIR_1, LOW); // set direction
           analogWrite(SPEED_1, 255); // set speed
@@ -61,11 +61,12 @@ void loop(){
           digitalWrite(DIR_2, HIGH); // set direction
           analogWrite(SPEED_2, 255); // set speed
           
-          delay(1000);
+          delay(900);
 
           analogWrite(SPEED_1, 0); 
           analogWrite(SPEED_2, 0); 
         }
       }
   }
+
 ```
