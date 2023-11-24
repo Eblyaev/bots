@@ -30,15 +30,14 @@ void loop(){
       IrReceiver.resume(); // Enable receiving of the next value
       int command = IrReceiver.decodedIRData.command;
       
-      switch (command) {
-         case IR_BUTTON_CH_MINUS: { 
+      if (command = IR_BUTTON_MINUS) {
           digitalWrite(DIR_1, LOW); // set direction
           analogWrite(SPEED_1, 255); // set speed
 
           digitalWrite(DIR_2, HIGH); // set direction
           analogWrite(SPEED_2, 255); // set speed
           
-          delay(700);
+          delay(500);
 
           digitalWrite(DIR_1, HIGH); // set direction
           analogWrite(SPEED_1, 255); // set speed
@@ -54,7 +53,7 @@ void loop(){
           digitalWrite(DIR_2, HIGH); // set direction
           analogWrite(SPEED_2, 255); // set speed
           
-          delay(700);
+          delay(500);
 
           digitalWrite(DIR_1, HIGH); // set direction
           analogWrite(SPEED_1, 255); // set speed
@@ -63,17 +62,10 @@ void loop(){
           analogWrite(SPEED_2, 255); // set speed
           
           delay(1000);
-          
 
-          break;
-        
-        }
-        case IR_BUTTON_PLAY_PAUSE: { // stop mototrs
           analogWrite(SPEED_1, 0); 
-          analogWrite(SPEED_2, 0);  
-          break;
+          analogWrite(SPEED_2, 0); 
         }
       }
   }
-}
 ```
